@@ -1,16 +1,16 @@
----
-- name: CI
-  on:
-    push:
-      branch:
-        - main
-  
-  jobs:
-    build:
-      runs-on: ubuntu-latest
+name: CI
+on:
+  push:
+    branches:
+      - main
 
-      steps:
-        - name: Get your code
-          run: echo "hello world"
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-       
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Say Hello
+        run: echo "Hello, World!"
