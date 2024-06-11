@@ -1,0 +1,16 @@
+---
+- name: CI
+  on:
+    push:
+      branch:
+        - main
+  
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Get your code
+          run: echo "hello world"
+
+       
